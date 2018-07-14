@@ -39,8 +39,8 @@
   					<section id="nav-info">
 		
 						<div id="contact-us-directly">
-							<!--<div><img src="img/kamikazecustoms.jpg"></div>-->
-							<div><img src="img/logo.jpg"></div>
+							<div><img src="img/kamikazecustoms.jpg"></div>
+							<!--<div><img src="img/logo.jpg"></div>-->
 							<div>Contact Us Directly</div>
 							<div>(123) 456-7890</div>
 						</div>
@@ -123,6 +123,21 @@ $('#floating-nav').click(function()
 		$('#floating-nav').removeClass('close');
 	}
 });
+
+var x1 = 0;
+
+setInterval(function(){ setBackgroundImages() }, 10);
+
+function setBackgroundImages()
+{
+	x1++;
+
+	if (x1 == 1600)
+		x1 = 0;
+
+	$('#nav-info').css('background-position-x', x1);	
+
+}
 </script>
 
 	</body>
