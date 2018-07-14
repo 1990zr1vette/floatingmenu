@@ -20,7 +20,9 @@
 	</head>
 
 	<body>
-  		<header class="fadeable">HEADER</header>
+  		<header class="fadeable">
+			<img src="img/logo.jpg">
+  		</header>
 
   		<main class="fadeable">MAIN</main>
 
@@ -104,9 +106,19 @@ $('#floating-nav').click(function()
 		});
 
 		$('#nav-wrapper').removeClass('nav-wrapper-closed');
+
 		setTimeout(function(){ $('#nav-info').animate({opacity:1}); }, 500);
 
 		$('#floating-nav').addClass('close');
+
+		var timeout = 250;
+		$.each($('#nav nav ul li'),function()
+		{
+			var li = $(this);
+			setTimeout(function(){ $(li).animate({opacity:1}); }, timeout);
+
+			timeout+= 250;
+		});
 
 	}
 	else
@@ -121,6 +133,10 @@ $('#floating-nav').click(function()
 		$('#nav-wrapper').addClass('nav-wrapper-closed');
 
 		$('#floating-nav').removeClass('close');
+
+		$.each($('#nav nav ul li'),function(){$(this).css('opacity',0);});
+
+				
 	}
 });
 

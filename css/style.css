@@ -11,6 +11,7 @@ html, body
     height:100%;
     color:green;
     background-color:#333;
+    =background-color:#000;
 }
 
 ul
@@ -104,6 +105,7 @@ main
 #floating-nav.close
 {
     background-color:rgb(0,0,0);
+    background-color:transparent;
 }
 
 #floating-nav.close div:nth-child(1)
@@ -118,7 +120,7 @@ main
 
 #floating-nav.close div:nth-child(3) 
 {
-    transform: rotate(-45deg) translate(4px, -5px);
+    transform:rotate(-45deg) translate(4px, -5px);
 }
 
 
@@ -174,6 +176,7 @@ main
     transition: all 1s ease-in-out;
     z-index: 2;
     background:rgba(0, 0, 0, 1);
+    =background-color:rgba(0,50,0,0.9);
 }
 
 #nav-wrapper.nav-wrapper-closed #nav 
@@ -214,6 +217,11 @@ main
 #nav-info nav ul li a
 {
     font-size:36px;
+}
+
+#nav nav ul li
+{
+    opacity:0;
 }
 
 #contact-us-directly
