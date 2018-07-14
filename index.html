@@ -1,0 +1,129 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+	  	<meta charset="utf-8">
+
+	  	<title>Kamikaze Customs</title>
+
+	  	<meta name="description" content="">
+	  	<meta name="author" content="">
+
+	  	<link rel="stylesheet" href="css/style.css">
+
+	  	<!--[if lt IE 9]>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	  	<![endif]-->
+
+	  	<script src="js/jquery-3.3.1.min.js"></script>
+	</head>
+
+	<body>
+  		<header class="fadeable">HEADER</header>
+
+  		<main class="fadeable">MAIN</main>
+
+  		<footer class="fadeable">FOOTER</footer>
+
+  		<nav id="floating-nav">
+  			<div></div>
+  			<div></div>
+  			<div></div>
+  		</nav>
+
+  		<section id="nav-wrapper" class="nav-wrapper-closed">
+  			
+  			<section id="nav">
+  				
+  					<section id="nav-info">
+		
+						<div id="contact-us-directly">
+							<!--<div><img src="img/kamikazecustoms.jpg"></div>-->
+							<div><img src="img/logo.jpg"></div>
+							<div>Contact Us Directly</div>
+							<div>(123) 456-7890</div>
+						</div>
+						
+						<nav>
+							<ul>
+								<li><a href="#">ITEM 1</a></li>
+								<li><a href="#">ITEM 2</a></li>
+								<li><a href="#">ITEM 3</a></li>
+								<li><a href="#">ITEM 4</a></li>
+								<li><a href="#">ITEM 5</a></li>
+								<li><a href="#">ITEM 6</a></li>
+								<li><a href="#">ITEM 7</a></li>
+							</ul>
+						</nav>
+
+  					</section>
+
+  			</section>
+
+  		</section>
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+	if ($(window).width() >= $(window).height())
+		var size = $(window).width() * 3;
+	else
+		var size = $(window).height() * 3;
+
+	$('#nav').css('width',size).css('height',size);
+	$('#nav').css('top','-' + (size / 2) + 'px').css('right','-' + (size / 2) + 'px');
+});
+
+$(window).scroll(function()
+{
+	if ($(window).scrollTop() >= 100)
+	{
+		if ($('#floating-nav').css('display') == 'none')
+		{
+			$('#floating-nav').fadeIn();
+		}
+	}
+	else
+	{
+		if ($('#nav-wrapper').hasClass('nav-wrapper-closed') == true)
+		{
+			$('#floating-nav').fadeOut();
+		}
+	}
+});	
+
+$('#floating-nav').click(function()
+{
+	if ($('#nav-wrapper').hasClass('nav-wrapper-closed') == true)
+	{
+
+		$.each($('.fadeable'),function()
+		{
+			$(this).animate({opacity:0.2});
+		});
+
+		$('#nav-wrapper').removeClass('nav-wrapper-closed');
+		setTimeout(function(){ $('#nav-info').animate({opacity:1}); }, 500);
+
+		$('#floating-nav').addClass('close');
+
+	}
+	else
+	{
+
+		$.each($('.fadeable'),function()
+		{
+			$(this).animate({opacity:1});
+		});
+
+		$('#nav-info').animate({opacity:0});
+		$('#nav-wrapper').addClass('nav-wrapper-closed');
+
+		$('#floating-nav').removeClass('close');
+	}
+});
+</script>
+
+	</body>
+</html>
