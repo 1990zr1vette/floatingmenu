@@ -22,3 +22,7 @@ $.fn.inView = function(space = 0)
 
     return(visibleArea >= objStartPos && scrollPosition <= objEndPos ? true : false)
 };
+
+
+
+ 
