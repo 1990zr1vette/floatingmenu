@@ -305,6 +305,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 #nav nav ul li
 {
     opacity:0;
+    transition:all 1s;
+}
+
+#nav nav ul li.opened
+{
+    opacity:1;
 }
 
 #contact-us-directly
