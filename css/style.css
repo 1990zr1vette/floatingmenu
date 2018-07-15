@@ -101,6 +101,12 @@ footer
     -ms-grid-column:1;
 }
 
+#header-left img
+{
+    padding-top:10px;
+    padding-left:10px;
+}
+
 #header-right
 {
     -ms-grid-column:2;
