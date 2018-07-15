@@ -83,11 +83,6 @@ header
 
 main
 {
-    display:block;
-    width:80%;
-    margin-left:10%;
-    margin-top:50px;
-    margin-bottom:50px;
 }
 
 footer
@@ -280,7 +275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
     display:grid;
     display:-ms-grid;
     grid-template-columns:600px auto;
-    -ms-grid-columns:600px auto; 
+    -ms-grid-columns:600px calc(100vw - 600px); 
 }
 
 #nav-info
@@ -350,6 +345,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 #nav-info-nav ul li
 {
     text-align:right;
+}
+
+.container
+{
+    display:block;
+    width:80%;
+    margin-left:10%;
+    margin-top:50px;
+    margin-bottom:50px;
 }
 
 .sub-menu 
