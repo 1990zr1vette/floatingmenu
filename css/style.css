@@ -279,13 +279,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
     display:grid;
     display:-ms-grid;
-    grid-template-columns:auto 600px;
-    -ms-grid-columns:auto 600px; 
+    grid-template-columns:600px auto;
+    -ms-grid-columns:600px auto; 
 }
 
 #nav-info
 {
-    padding-left:100px;
+    padding-left:50px;
     margin-top:50px;
     background: url(../img/smoke1.png) 0 0 repeat-x;
 }
@@ -310,7 +310,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 #contact-us-directly
 {
     padding-left:100px;
-    -ms-grid-column:2;
+    -ms-grid-column:1;
 }
 
 #contact-us-directly img
@@ -333,27 +333,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 
 #nav-info-nav
 {
-    -ms-grid-column:1;
+    -ms-grid-column:2;
 }
 
 #nav-info-nav ul 
 {
-    width:50%;
-    =border:1px solid red;
+    width:90%;
 }
 
 #nav-info-nav ul li
 {
-    =border:1px solid green;
+    text-align:right;
 }
-
-#nav-info-nav ul li ul
-{
-    =border:1px solid blue;
-    ==position:relative;
-    display:none;
-}
-
 
 .sub-menu 
 {

@@ -11,7 +11,7 @@ $('#floating-nav').click(function()
 
 		$('#floating-nav').addClass('close');
 
-		var timeout = 1000;
+		var timeout = 500;
 		$.each($('#nav nav ul li'),function()
 		{
 			var li = $(this);
