@@ -11,7 +11,7 @@ html, body
     height:100%;
     color:green;
     background-color:#333;
-    =background-color:#000;
+    background-color:#000;
 }
 
 ul
@@ -152,8 +152,22 @@ footer
 
 #floating-nav.close
 {
-    background-color:rgb(0,0,0);
-    background-color:transparent;
+    width:80px;
+    height:80px;
+    border-radius:40px;
+    background-color:red;
+    =background-color:rgb(0,0,0);
+    =background-color:transparent;
+}
+
+#floating-nav.close div
+{
+    margin-left:16px;
+}
+
+#floating-nav.close div:nth-child(1)
+{
+    margin-top:25px;
 }
 
 #floating-nav.close div:nth-child(1)
@@ -224,7 +238,9 @@ footer
     transition: all 1s ease-in-out;
     z-index: 2;
     background:rgba(0, 0, 0, 1);
-    =background-color:rgba(0,50,0,0.9);
+    =background-color:rgba(0,25,0,1);
+    =background-color:#013220;
+    =background-color:#011910;
 }
 
 #nav-wrapper.nav-wrapper-closed #nav 
@@ -254,7 +270,7 @@ footer
 #nav-info
 {
     margin-top:50px;
-    background: url(../img/smoke1.png) 0 0 repeat-x;
+    =background: url(../img/smoke1.png) 0 0 repeat-x;
 }
 
 #nav-info nav ul li 
