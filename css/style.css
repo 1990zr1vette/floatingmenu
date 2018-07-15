@@ -329,6 +329,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
     opacity:1;
 }
 
+#nav-info-nav ul li a
+{
+    letter-spacing:2px;
+    transition:all 0.5s;
+}
+
+#nav-info-nav ul li a:hover 
+{
+    letter-spacing:4px;
+}
+
 #contact-us-directly
 {
     padding-left:100px;
