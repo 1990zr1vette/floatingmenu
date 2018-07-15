@@ -1,14 +1,9 @@
 
 $('#floating-nav').click(function()
 {
-
 	if ($('#nav-wrapper').hasClass('nav-wrapper-closed') == true)
 	{
-
-		$.each($('.fadeable'),function()
-		{
-			$(this).animate({opacity:0.2});
-		});
+		$.each($('.fadeable'),function(){$(this).animate({opacity:0.2});});
 
 		$('#nav-wrapper').removeClass('nav-wrapper-closed');
 
@@ -21,27 +16,16 @@ $('#floating-nav').click(function()
 		{
 			var li = $(this);
 			setTimeout(function(){ $(li).animate({opacity:1},2000); }, timeout);
-
-			timeout+= 250;
+			timeout+= 100;
 		});
-
 	}
 	else
 	{
-
-		$.each($('.fadeable'),function()
-		{
-			$(this).animate({opacity:1});
-		});
-
+		$.each($('#nav nav ul li'),function(){$(this).css('opacity',0);});
+		$.each($('.fadeable'),function(){$(this).animate({opacity:1});});
 		$('#nav-info').animate({opacity:0});
 		$('#nav-wrapper').addClass('nav-wrapper-closed');
-
-		$('#floating-nav').removeClass('close');
-
-		$.each($('#nav nav ul li'),function(){$(this).css('opacity',0);});
-
-				
+		$('#floating-nav').removeClass('close');	
 	}
 });
 

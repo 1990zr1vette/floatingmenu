@@ -83,8 +83,16 @@ header
 
 main
 {
-    height:2000px;
-    min-height:2000px;
+    display:block;
+    width:80%;
+    margin-left:10%;
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+footer
+{
+
 }
 
 #header-right, #header-right nav, #header-right ul
