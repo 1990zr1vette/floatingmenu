@@ -134,6 +134,28 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   				
   					<section id="nav-info">
 		
+						<nav id="nav-info-nav">
+							<ul>
+								<li><a href="#">ITEM 1</a></li>
+								<li><a href="#">ITEM 2</a></li>
+								<li>
+									<a href="#">PATTERNS</a>
+									<!--
+									<ul class="nav-sub-menu">
+										<li><a href="#">PATTERN 1</a></li>
+										<li><a href="#">PATTERN 2</a></li>
+										<li><a href="#">PATTERN 3</a></li>
+										<li><a href="#">PATTERN 4</a></li>
+									</ul>
+									-->									
+								</li>
+								<li><a href="#">ITEM 4</a></li>
+								<li><a href="#">ITEM 5</a></li>
+								<li><a href="#">ITEM 6</a></li>
+								<li><a href="#">ITEM 7</a></li>
+							</ul>
+						</nav>
+
 						<div id="contact-us-directly">
 							<div><img src="img/kamikazecustoms.jpg"></div>
 							<!--<div><img src="img/logo.jpg"></div>-->
@@ -141,17 +163,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 							<div>(123) 456-7890</div>
 						</div>
 						
-						<nav id="nav-info-nav">
-							<ul>
-								<li><a href="#">ITEM 1</a></li>
-								<li><a href="#">ITEM 2</a></li>
-								<li><a href="#">ITEM 3</a></li>
-								<li><a href="#">ITEM 4</a></li>
-								<li><a href="#">ITEM 5</a></li>
-								<li><a href="#">ITEM 6</a></li>
-								<li><a href="#">ITEM 7</a></li>
-							</ul>
-						</nav>
+
 
   					</section>
 
@@ -161,7 +173,29 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 		<script src="js/nav.js"></script>
 
+<script type="text/javascript">
+$.each($('.nav-sub-menu'),function()
+{
+	$(this).css('width',$(this).parent().width());
+	//$(this).css('left',$(this).parent().width());
+	//$(this).css('top','-40px');
+});
 
+$('.nav-has-sub-menu').hover(function()
+{
+	if ($(this).attr('data') == '0')
+	{
+		$(this).attr('data','1');
+		$(this).find('.nav-sub-menu').css('display','block');
+	}
+	else
+	{
+		$(this).attr('data','0');
+		$(this).find('.nav-sub-menu').css('display','none');		
+	}
+	
+});
+</script>
 
 	</body>
 </html>

@@ -143,6 +143,14 @@ footer
     z-index:9999;
     cursor:pointer;
     transition:all 1s;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#006e2e+0,006e2e+100 */
+background: #006e2e; /* Old browsers */
+background: -moz-linear-gradient(top, #006e2e 0%, #006e2e 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #006e2e 0%,#006e2e 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #006e2e 0%,#006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006e2e', endColorstr='#006e2e',GradientType=0 ); /* IE6-9 */
+
 }
 
 #floating-nav div
@@ -156,6 +164,14 @@ footer
     height:80px;
     border-radius:40px;
     background-color:red;
+
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a90329+0,8f0222+44,6d0019+100;Brown+Red+3D */
+background: #a90329; /* Old browsers */
+background: -moz-linear-gradient(top, #a90329 0%, #8f0222 44%, #6d0019 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 44%,#6d0019 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, #a90329 0%,#8f0222 44%,#6d0019 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019',GradientType=0 ); /* IE6-9 */
+
     =background-color:rgb(0,0,0);
     =background-color:transparent;
 }
@@ -263,24 +279,25 @@ footer
 
     display:grid;
     display:-ms-grid;
-    grid-template-columns:60% 40%;
-    -ms-grid-columns:60% 40%; 
+    grid-template-columns:auto 600px;
+    -ms-grid-columns:auto 600px; 
 }
 
 #nav-info
 {
+    padding-left:100px;
     margin-top:50px;
-    =background: url(../img/smoke1.png) 0 0 repeat-x;
+    background: url(../img/smoke1.png) 0 0 repeat-x;
 }
 
 #nav-info nav ul li 
 {
     margin-bottom:50px;
-    text-align:right;
+    =text-align:right;
     padding-right:100px;
 }
 
-#nav-info nav ul li a
+#nav-info nav ul li a, #nav-info nav ul li span
 {
     font-size:36px;
 }
@@ -293,7 +310,7 @@ footer
 #contact-us-directly
 {
     padding-left:100px;
-    -ms-grid-column:1;
+    -ms-grid-column:2;
 }
 
 #contact-us-directly img
@@ -316,8 +333,27 @@ footer
 
 #nav-info-nav
 {
-    -ms-grid-column:2;
+    -ms-grid-column:1;
 }
+
+#nav-info-nav ul 
+{
+    width:50%;
+    =border:1px solid red;
+}
+
+#nav-info-nav ul li
+{
+    =border:1px solid green;
+}
+
+#nav-info-nav ul li ul
+{
+    =border:1px solid blue;
+    ==position:relative;
+    display:none;
+}
+
 
 .sub-menu 
 {
