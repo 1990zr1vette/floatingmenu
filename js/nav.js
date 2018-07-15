@@ -12,7 +12,7 @@ $('#floating-nav').click(function()
 		{
 			var li = $(this);
 			setTimeout(function(){ $(li).addClass('opened'); }, timeout);
-			timeout+= 100;
+			timeout+= 200;
 		});
 	}
 	else
